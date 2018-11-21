@@ -110,6 +110,7 @@ h1 {
 	margin-top: 150px;
 }
 
+
 input[type=text], select, textarea {
     width: 100%; 
     padding: 12px;  
@@ -154,7 +155,7 @@ input[type=submit]:hover {
 }
 
 /* Her kommer styling af indkøbsvogn */
- 
+
 .product-image {
   float: left;
   width: 20%;
