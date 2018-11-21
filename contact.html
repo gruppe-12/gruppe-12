@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>contact</title>
+<link rel="stylesheet" type="text/css" href="style-mobile.css">
+<link rel="stylesheet" type="text/css" href="style-web.css" media="screen and (min-width: 600px)">
+</head>
+
+<body>
+	<h1>Kontakt os</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem fugit, consequuntur necessitatibus quam eveniet, vitae odio, temporibus nesciunt fuga voluptas aspernatur dolor doloribus, aperiam animi autem error atque a ducimus.</p>d
+	
+	<div class="container">
+  <form action="mailto:sweetbot@sweetbot.dk" method="post" enctype="text/plain">
+
+    <label class="tekst" for="navn">Navn</label>
+    <input type="text" id="navn" name="navn" placeholder="Dit navn...">
+
+    <label class="tekst" for="ordrenummer">Kvitterings- /ordrenummer</label>
+    <input type="text" id="ordrenummer" name="ordrenummer" placeholder="Skriv dit kvitterings- /ordrenummer...">
+
+    <label class="tekst" for="hjaelp">Hvad kan vi hjælpe dig med?</label>
+    <select id="hjaelp" name="hjaelp">
+      <option value="service">Spørgsmål til produkter</option>
+      <option value="anuller">Spørgsmål til leveringstid</option>
+      <option value="produkt">Spørgsmål til priser</option>
+	  <option value="anuller">Anullering af ordre</option>
+		<option value="andet">Andet</option>
+    </select>
+
+    <label class="tekst" for="besked">Besked</label>
+    <textarea id="besked" name="besked" placeholder="Skriv din besked til os her..." style="height:200px"></textarea>
+	  
+	<label class="tekst" for="telefon">Telefonnummer</label>
+    <input type="text" id="telefon" name="telefon" placeholder="Skriv dit telefonnummer her...">
+	
+	<label class="tekst" for="email">E-mail</label>
+    <input type="text" id="email" name="email" placeholder="Skriv din e-mail her...">
+    <input type="submit" value="Send besked">
+	<br>	
+
+  </form>	  
+
+</div><br>
+	
+	<div class="tider">Åbningstider for kundeservice:
+	<br><br>
+<p>+45 21 21 21 21</p>
+	<br>
+<p>Mandag-fredag: 08:00-21:00</p>
+	
+	<br>
+<p>Lørdag-søndag: 10:00-19:00</p>
+	
+	</div>
+</body>
+</html>

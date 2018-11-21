@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Indkoebsvogn</title>
+<link rel="stylesheet" type="text/css" href="style-mobile.css">
+<link rel="stylesheet" type="text/css" href="style-web.css" media="screen and (min-width: 600px)">
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+ 
+/* Set rates + misc */
+var taxRate = 0.25;
+var shippingRate = 50.00; 
+var fadeTime = 300;
+ 
+ 
+/* Assign actions */
+$('.product-quantity input').change( function() {
+  updateQuantity(this);
+});
+ 
+$('.product-removal button').click( function() {
+  removeItem(this);
+});
+ 
+ 
+/* Recalculate cart */
+function recalculateCart()
+{
+  var subtotal = 0;
+   
+  /* Sum up row totals */
+  $('.product').each(function () {
+    subtotal += parseFloat($(this).children('.product-line-price').text());
+  });
+   
+  /* Calculate totals */
+  var tax = subtotal * taxRate;
+  var shipping = (subtotal > 0 ? shippingRate : 0);
+  var total = subtotal + tax + shipping;
+   
+  /* Update totals display */
+  $('.totals-value').fadeOut(fadeTime, function() {
+    $('#cart-subtotal').html(subtotal.toFixed(2));
+    $('#cart-tax').html(tax.toFixed(2));
+    $('#cart-shipping').html(shipping.toFixed(2));
+    $('#cart-total').html(total.toFixed(2));
+    if(total == 0){
+      $('.checkout').fadeOut(fadeTime);
+    }else{
+      $('.checkout').fadeIn(fadeTime);
+    }
+    $('.totals-value').fadeIn(fadeTime);
+  });
+}
+ 
+ 
+/* Update quantity */
+function updateQuantity(quantityInput)
+{
+  /* Calculate line price */
+  var productRow = $(quantityInput).parent().parent();
+  var price = parseFloat(productRow.children('.product-price').text());
+  var quantity = $(quantityInput).val();
+  var linePrice = price * quantity;
+   
+  /* Update line price display and recalc cart totals */
+  productRow.children('.product-line-price').each(function () {
+    $(this).fadeOut(fadeTime, function() {
+      $(this).text(linePrice.toFixed(2));
+      recalculateCart();
+      $(this).fadeIn(fadeTime);
+    });
+  });  
+}
+ 
+ 
+/* Remove item from cart */
+function removeItem(removeButton)
+{
+  /* Remove row from DOM and recalc cart total */
+  var productRow = $(removeButton).parent().parent();
+  productRow.slideUp(fadeTime, function() {
+    productRow.remove();
+    recalculateCart();
+  });
+}
+ 
+});
+	</script>
+</head>
+
+	
+<body>
+	<h1>Indkøbsvogn</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam obcaecati voluptas sint tempore, temporibus tenetur pariatur suscipit? Ut dicta minima perspiciatis harum, dolorum, recusandae nihil unde, ducimus doloremque eveniet deleniti!</p>
+ <h1>Produkter</h1>
+ 
+<div class="shopping-cart">
+ 
+  <div class="column-labels">
+    <label class="product-image">billede</label>
+    <label class="product-details">Produkt</label>
+    <label class="product-price">Pris</label>
+    <label class="product-quantity">Antal</label>
+    <label class="product-removal">Fjern</label>
+    <label class="product-line-price">Total</label>
+  </div>
+ 
+  <div class="product">
+    <div class="product-image">
+      <img src="Icons/webdesign.jpg" alt="photo">
+    </div>
+    <div class="product-details">
+      <div class="product-title">Website design</div>
+      <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, esse.</p>
+    </div>
+    <div class="product-price">15000.00</div>
+    <div class="product-quantity">
+      <input type="number" value="2" min="1">
+    </div>
+    <div class="product-removal">
+      <button class="remove-product">
+        Fjern
+      </button>
+    </div>
+    <div class="product-line-price">30000.00</div>
+  </div>
+ 
+  <div class="product">
+    <div class="product-image">
+      <img src="Icons/websecurity.jpg" alt="photo">
+    </div>
+    <div class="product-details">
+      <div class="product-title">Internet sikkerhed</div>
+      <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, adipisci.</p>
+    </div>
+    <div class="product-price">10000.00</div>
+    <div class="product-quantity">
+      <input type="number" value="1" min="1">
+    </div>
+    <div class="product-removal">
+      <button class="remove-product">
+        Fjern
+      </button>
+    </div>
+    <div class="product-line-price">10000.00</div>
+  </div>
+ 
+  <div class="totals">
+    <div class="totals-item">
+      <label>Eksl moms</label>
+      <div class="totals-value" id="cart-subtotal">40000.00</div>
+    </div>
+    <div class="totals-item">
+      <label>Moms (25%)</label>
+      <div class="totals-value" id="cart-tax">10000.00</div>
+    </div>
+    <div class="totals-item">
+      <label>Fragt</label>
+      <div class="totals-value" id="cart-shipping">50.00</div>
+    </div>
+    <div class="totals-item totals-item-total">
+      <label>Samlet pris</label>
+      <div class="totals-value" id="cart-total">50050.00</div>
+    </div>
+  </div>
+       
+      <button class="checkout">Betaling</button>
+ 
+</div>
+
+
+</body>
+</html>
