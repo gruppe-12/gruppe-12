@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <title>Indkoebsvogn</title>
 <link rel="stylesheet" type="text/css" href="style-mobile.css">
+<link rel="stylesheet" type="text/css" href="navcss.css">
 <link rel="stylesheet" type="text/css" href="style-web.css" media="screen and (min-width: 600px)">
-<link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <script>
 $(document).ready(function() {
  
-/* Set rates + misc */
+/* Regner moms og fragt med */
 var taxRate = 0.25;
 var shippingRate = 50.00; 
 var fadeTime = 300;
  
  
-/* Assign actions */
+/* Handling */
 $('.product-quantity input').change( function() {
   updateQuantity(this);
 });
@@ -27,22 +27,22 @@ $('.product-removal button').click( function() {
 });
  
  
-/* Recalculate cart */
+/* Omregner total */
 function recalculateCart()
 {
   var subtotal = 0;
    
-  /* Sum up row totals */
+  /* Regner tallene sammen */
   $('.product').each(function () {
     subtotal += parseFloat($(this).children('.product-line-price').text());
   });
    
-  /* Calculate totals */
+  /* Regner total */
   var tax = subtotal * taxRate;
   var shipping = (subtotal > 0 ? shippingRate : 0);
   var total = subtotal + tax + shipping;
    
-  /* Update totals display */
+  /* Opdatere total */
   $('.totals-value').fadeOut(fadeTime, function() {
     $('#cart-subtotal').html(subtotal.toFixed(2));
     $('#cart-tax').html(tax.toFixed(2));
@@ -58,16 +58,16 @@ function recalculateCart()
 }
  
  
-/* Update quantity */
+/* Opdatere antal */
 function updateQuantity(quantityInput)
 {
-  /* Calculate line price */
+  /* Pris */
   var productRow = $(quantityInput).parent().parent();
   var price = parseFloat(productRow.children('.product-price').text());
   var quantity = $(quantityInput).val();
   var linePrice = price * quantity;
    
-  /* Update line price display and recalc cart totals */
+  /* Omregner efter pris */
   productRow.children('.product-line-price').each(function () {
     $(this).fadeOut(fadeTime, function() {
       $(this).text(linePrice.toFixed(2));
@@ -78,10 +78,10 @@ function updateQuantity(quantityInput)
 }
  
  
-/* Remove item from cart */
+/* Fjern vare fra kurven */
 function removeItem(removeButton)
 {
-  /* Remove row from DOM and recalc cart total */
+  /* Fjerner en vare */
   var productRow = $(removeButton).parent().parent();
   productRow.slideUp(fadeTime, function() {
     productRow.remove();
@@ -95,7 +95,6 @@ function removeItem(removeButton)
 
 	
 <body>
-	
 	<div class="navbar">
 		<div id="navbar">
             <a href="#">Hjem</a>
@@ -110,7 +109,6 @@ function removeItem(removeButton)
 		</div>
 		</div>	
 	</div>	
-	
 	<h1>Indkøbsvogn</h1>
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam obcaecati voluptas sint tempore, temporibus tenetur pariatur suscipit? Ut dicta minima perspiciatis harum, dolorum, recusandae nihil unde, ducimus doloremque eveniet deleniti!</p>
  <h1>Produkter</h1>
