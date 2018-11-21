@@ -99,14 +99,13 @@ h1 {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	
 }
 
   article {
 	
-	background: white;
 	width: 100%;
 	margin-bottom: 8px;
-	outline: 1px solid #C5C5C5;
 	padding: 2%;
 	
 	
@@ -114,12 +113,11 @@ h1 {
 
 
 footer {
-	width: 70%;
-	margin: 0 14.99%;
-	text-align: center;
+	width: 100%;
 }
 
 article {
+	background-color: black;
 	height: 2200px;
 	width: 70%;
 	margin-right: 14.99%;
@@ -148,8 +146,6 @@ article p {
 
 h3 {
 	text-align: center;
-	border: solid 2px #749CD3;
-	border-radius: 10px;
 	width: 12%;
 	height: 25px;
 	margin: 0 43.99%;
@@ -167,12 +163,16 @@ article a {
 }
 /* Her kommer styling til kontaktformular */
 
+.kontaktlorem {
+	width: 80%;
+	margin-left: 10%;
+}
 .tekst{
 	color: #2A1000;
 }
 
 .margintop{
-	margin-top: 150px;
+	margin-top: 10px;
 }
 
 
@@ -585,4 +585,12 @@ input[type=checkbox]:checked + label:before {
   .btn{
     margin-top: 20px;
   }
+}
+
+
+
+/* copyright*/
+
+.copy {
+	margin-left: 45%;
 }
