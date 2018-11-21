@@ -94,12 +94,76 @@ h1 {
 	text-align: center;
 	font-size: 26px;
 }
-.navbar {
+.indhold {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
 
+  article {
+	
+	background: white;
+	width: 100%;
+	margin-bottom: 8px;
+	outline: 1px solid #C5C5C5;
+	padding: 2%;
+	
+	
+}
+
+
+footer {
+	width: 70%;
+	margin: 0 14.99%;
+	text-align: center;
+}
+
+article {
+	height: 2200px;
+	width: 70%;
+	margin-right: 14.99%;
+	margin-left: 14.99%;
+}
+
+article h2 {
+	text-align: center;
+}
+
+article img {
+	width: 50%;
+	margin-right: 24.99%;
+	margin-left: 24.99%;
+	margin-top: 50px;
+}
+
+article p {
+	text-align: left;
+	font-size: 16px;
+	width: 70%;
+	margin-left: 16%;
+	margin-right: 15%;
+	margin-top: 20px;
+}
+
+h3 {
+	text-align: center;
+	border: solid 2px #749CD3;
+	border-radius: 10px;
+	width: 12%;
+	height: 25px;
+	margin: 0 43.99%;
+	margin-top: 50px;
+	font-size: 1em;
+	
+}
+
+article a {
+	text-decoration: none;
+}
+
+.webd {
+	margin-top: 100px;
+}
 /* Her kommer styling til kontaktformular */
 
 .tekst{
@@ -155,6 +219,10 @@ input[type=submit]:hover {
 }
 
 /* Her kommer styling af indkøbsvogn */
+.tekstvogn {
+	width: 80%;
+	margin-left: 10%;
+}
 
 .product-image {
   float: left;
