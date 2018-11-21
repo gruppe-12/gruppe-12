@@ -106,6 +106,10 @@ h1 {
 	color: #2A1000;
 }
 
+.margintop{
+	margin-top: 150px;
+}
+
 input[type=text], select, textarea {
     width: 100%; 
     padding: 12px;  
@@ -155,33 +159,27 @@ input[type=submit]:hover {
   float: left;
   width: 20%;
 }
- 
 .product-details {
   float: left;
   width: 37%;
 }
- 
 .product-price {
   float: left;
   width: 12%;
 }
- 
 .product-quantity {
   float: left;
   width: 10%;
 }
- 
 .product-removal {
   float: left;
   width: 9%;
 }
- 
 .product-line-price {
   float: left;
   width: 12%;
   text-align: right;
 }
- 
 .group:before, .shopping-cart:before, .column-labels:before, .product:before, .totals-item:before,
 .group:after,
 .shopping-cart:after,
@@ -191,19 +189,15 @@ input[type=submit]:hover {
   content: '';
   display: table;
 }
- 
 .group:after, .shopping-cart:after, .column-labels:after, .product:after, .totals-item:after {
   clear: both;
 }
- 
 .group, .shopping-cart, .column-labels, .product, .totals-item {
   zoom: 1;
 }
-
 .product .product-price:before, .product .product-line-price:before, .totals-value:before {
   content: 'DKK ';
 }
- 
 .marginvogn {
   padding: 0px 30px 30px 20px;
   font-family: Lato, sans-serif;
