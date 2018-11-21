@@ -217,13 +217,11 @@ input[type=submit]:hover {
 	background-color: #f8f8f8;
     }
 }
-
 /* Her kommer styling af indkøbsvogn */
 .tekstvogn {
 	width: 80%;
 	margin-left: 10%;
 }
-
 .product-image {
   float: left;
   width: 20%;
@@ -425,7 +423,6 @@ label {
   .product-removal {
     float: right;
   }
- 
   .product-line-price {
     float: right;
     clear: left;
