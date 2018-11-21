@@ -54,6 +54,98 @@ table {
 
 /* Her kommer mine egne styles */
 
+/* Styling af nav bar */
+
+#navbar {
+      
+      background: #749CD3;
+      top: 0;
+      width: 100%;
+      display: block;
+      transition: top 0.8s;
+}
+ 
+#navbar a {
+     
+      display: inline-block;
+      color: #fff;
+      font-weight: 300;
+      text-decoration: none;
+      margin: 2em 2%;
+      font-size: 18px;	
+}
+.navbar {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.felt {
+	position: absolute;
+	right: 5%;
+	top: 30px;
+	transform: translate(-3%);
+}
+.feltbox input {
+	border: none;
+	background: none;
+	z-index: 1;
+	width: 25px;
+	height: 25px;
+	transition: all .25s ease-in .25s;
+	color: transparent;
+	font-size: 1em;
+	line-height: 25px;
+	
+}
+.feltbox input:hover {
+	cursor: pointer;
+}
+.feltbox input:hover:focus {
+	cursor: text;
+}
+.feltbox input:hover + span {
+	background: rgba(255,255,255,.2);
+}
+.feltbox input:focus {
+	width: 200px;
+	padding: 0 10px;
+	outline: none;
+	background: none;
+	color:#fff;
+}
+.feltbox input:focus + span {
+	width: 200px;
+}
+.feltbox input:focus + span::before {
+	width: 2px;
+	opacity: 0;
+	transition: all .25s ease-in;
+}
+.feltbox input + span {
+	z-index: -1;
+	position: absolute;
+	border: 2px solid #FFFFFF;
+	top: 0;
+	width: 25px;
+	height: 25px;
+	transition: all .25s ease-in .25s;
+	border-radius: 25px;
+	left: 0;
+}
+.feltbox input + span::before {
+	transition: all .25s ease-in -25s;
+	transform-origin: left top;
+	content: '';
+	position: absolute;
+	width: 15px;
+	height: 5px;
+	border-radius: 5px;
+	background: #FFFFFF;
+	transform: rotate(45deg) translate(30px, -2px);
+}
+
+
+/* Styling af side*/
 body{
 	font-family: lato, sans-serif;
 	margin: 2%;
@@ -418,6 +510,8 @@ input[type=checkbox]:checked + label:before {
 .hotbotlogo{
 	margin-bottom: 40px;
 	margin-left: -20px;
+	width: 100%;
+	height: 100%;
 }
 
 .payment{
