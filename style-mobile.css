@@ -204,7 +204,7 @@ input[type=submit]:hover {
   content: 'DKK ';
 }
  
-body {
+.marginvogn {
   padding: 0px 30px 30px 20px;
   font-family: Lato, sans-serif;
   font-weight: 300;
@@ -216,6 +216,7 @@ h1 {
  
 label {
   color: #aaa;
+  font-family: Lato, sans-serif;
 }
  
 .shopping-cart {
@@ -512,7 +513,7 @@ input[type=checkbox]:checked + label:before {
   border-radius: 5px;
   cursor: pointer;
 }
-@media screen and (max-width: 420px){
+@media screen and (max-width: 600px){
   .card-grp{
     flex-direction: column;
   }
