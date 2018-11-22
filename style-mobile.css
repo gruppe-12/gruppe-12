@@ -170,6 +170,10 @@ article a {
 }
 /* Her kommer styling til kontaktformular */
 
+.kontaktikon{
+	margin-left: 45%
+}
+
 .kontaktlorem {
 	width: 80%;
 	margin-left: 10%;
