@@ -599,10 +599,9 @@ input[type=checkbox]:checked + label:before {
 .personikon{
 	width: 25%;
 	height: 25%;
-	margin-left: 20%;
+	margin-left: 25%;
 }
 .personikon2{
 	width: 25%;
 	height: 25%;
-	margin-right: 25%;
 }
