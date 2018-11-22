@@ -590,6 +590,32 @@ input[type=checkbox]:checked + label:before {
 
 
 
-/* copyright*/
+/*styling af produkt siden */
 
+.valgtprodukt {
+	width: 30%;
+	margin-left: 10%;
+	height: 30%;
+}
+.produkt {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: aliceblue;
+	width: 80%;
+	margin-left: 10%;
+}
+
+.produkt p {
+	width:30%;
+	margin-left: 5%;
+	height: 100px;
+}
+
+.kurven {
+	text-decoration: none;
+	position: absolute;
+	margin-top: 250px;
+	margin-left: 60%;
+	
+}
 
