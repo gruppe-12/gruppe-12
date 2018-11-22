@@ -192,16 +192,31 @@ h3 {
 	text-align: center;
 	border: solid 2px #749CD3;
 	border-radius: 10px;
-	width: 12%;
+	width: 15%;
 	height: 25px;
-	margin: 0 43.99%;
+	margin: 0 42.5%;
 	margin-top: 30px;
+	font-size: 18px;
 	
 }
 
 article a {
 	text-decoration: none;
+	
 }
+
+@media screen and (max-width: 700px){
+	h3 {
+		width: 20%;
+		font-size: 12px;
+		margin-left: 40%;
+		height: 20px;
+		
+	}
+}
+
+
+
 .webd {
 	margin-top: 100px;
 }
