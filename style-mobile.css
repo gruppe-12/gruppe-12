@@ -91,6 +91,11 @@
 	margin-left: 25%;
 	height: 50%;
 }
+.sweetbotlogo  {
+	width: 50%;
+	margin-left: 25%;
+	height: 50%;
+}
 h1 {	
 	text-align: center;
 	font-size: 26px;
@@ -588,3 +593,7 @@ input[type=checkbox]:checked + label:before {
     margin-top: 20px;
   }
 }
+
+/* Styling af Om os */
+
+
