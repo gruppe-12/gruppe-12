@@ -594,16 +594,21 @@ input[type=checkbox]:checked + label:before {
 
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
 	.produkt p {
-		width: 90%;
-		margin-left: 5%;
+		width: 80%;
+		margin-left: 10%;
 		
 	}
 	
 	.produkt {
-		width: 100%;
-		margin-left: 0%;
+		width: 90%;
+		margin-left: 5%;
+		margin-bottom: 25px;
+		background-color: #f8f8f8;
+		height: 100%;
+		border-radius: 5px;
+		
 	}
 	
 	.valgtprodukt {
@@ -616,26 +621,68 @@ h4 {
 	font-size: 22px;
 	margin-left: 38%;
 	
+	
 }
 
 .kurven {
 	text-decoration: none;
-	margin-left: 36%;
-	margin-top: 0;
+	margin-left: 40%;
+	margin-top: 50px;
 	border: solid 2px #749CD3;
-	border-radius: 8px;
+	border-radius: 5px;
 	text-align: center;
-	font-size: 18px;
+	font-size: 16px;
 	padding: 0 10px;
+	
+	
 }
 
-@media screen and (min-width: 600px) {
+hr {
+	width: 0%;
+}
+
+@media screen and (min-width: 700px) {
 	.valgtprodukt {
-		width: 40%;
-		margin-left: 10%;
+		width: 20%;
+		margin-left: 20%;
 		
 	}
+	.produkt p {
+		width: 35%;
+		position: fixed;
+		margin-left: 45%;
+		margin-top: -20%;
+		font-size: 14px;
+		height: 50px;
+	}	
+	
+	.kurven {
+		position: fixed;
+		margin-left: 5%;
+		margin-top: 17%;
+		font-size: 16px;
 		
+	}
+	
+	#dkk {
+		position: absolute;
+		margin-top: -7%;
+	}
+	
+	hr {
+		width: 80%;
+		margin-top: 3%;
+	}
+	
+	h4 {
+		margin-left: 45%;
+	}
+	.produkt {
 		
+	}
 	}	
 		
+
+
+
+	
