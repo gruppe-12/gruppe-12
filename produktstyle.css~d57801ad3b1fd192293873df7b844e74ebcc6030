@@ -1,0 +1,711 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/* Styling af nav bar */
+
+#navbar {
+      
+      background: #749CD3;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: block;
+      transition: top 0.8s;  
+}
+#navbar a {
+     
+      display: inline-block;
+      color: #fff;
+      font-weight: 300;
+      text-decoration: none;
+      margin: 2em 2%;
+      font-size: 18px;
+}
+.felt {
+	position: absolute;
+	right: 5%;
+	top: 30px;
+	transform: translate(-3%);
+}
+.feltbox input {
+	border: none;
+	background: none;
+	z-index: 1;
+	width: 25px;
+	height: 25px;
+	transition: all .25s ease-in .25s;
+	color: transparent;
+	font-size: 1em;
+	line-height: 25px;
+}
+.feltbox input:hover {
+	cursor: pointer;
+}
+.feltbox input:hover:focus {
+	cursor: text;
+}
+.feltbox input:hover + span {
+	background: rgba(255,255,255,.2);
+}
+.feltbox input:focus {
+	width: 200px;
+	padding: 0 10px;
+	outline: none;
+	background: none;
+	color:#fff;
+}
+.feltbox input:focus + span {
+	width: 200px;
+}
+.feltbox input:focus + span::before {
+	width: 2px;
+	opacity: 0;
+	transition: all .25s ease-in;
+}
+.feltbox input + span {
+	z-index: -1;
+	position: absolute;
+	border: 2px solid #FFFFFF;
+	top: 0;
+	width: 25px;
+	height: 25px;
+	transition: all .25s ease-in .25s;
+	border-radius: 25px;
+	left: 0;
+}
+.feltbox input + span::before {
+	transition: all .25s ease-in -25s;
+	transform-origin: left top;
+	content: '';
+	position: absolute;
+	width: 15px;
+	height: 5px;
+	border-radius: 5px;
+	background: #FFFFFF;
+	transform: rotate(45deg) translate(30px, -2px);
+}
+.logo  {
+	width: 50%;
+	margin-top: 100px;
+	margin-left: 25%;
+	height: 50%;
+}
+.sweetbotlogo  {
+	width: 50%;
+	margin-left: 25%;
+	height: 50%;
+}
+h1 {	
+	text-align: center;
+	font-size: 26px;
+}
+.indhold {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	
+}
+
+  article {
+	
+	width: 100%;
+	margin-bottom: 8px;
+	padding: 2%;
+	
+	
+}
+
+
+footer {
+	width: 100%;
+	margin-right: 40%;
+	margin-left: 50%;
+}
+
+article {
+	background-color: black;
+	height: 2200px;
+	width: 70%;
+	margin-right: 14.99%;
+	margin-left: 14.99%;
+}
+
+article h2 {
+	text-align: center;
+}
+
+article img {
+	width: 50%;
+	margin-right: 24.99%;
+	margin-left: 24.99%;
+	margin-top: 50px;
+}
+
+article p {
+	text-align: left;
+	font-size: 16px;
+	width: 70%;
+	margin-left: 16%;
+	margin-right: 15%;
+	margin-top: 20px;
+}
+
+h3 {
+	text-align: center;
+	width: 12%;
+	height: 25px;
+	margin: 0 43.99%;
+	margin-top: 50px;
+	font-size: 1em;
+	
+}
+
+article a {
+	text-decoration: none;
+	width: 100%;
+}
+
+.webd {
+	margin-top: 100px;
+}
+/* Her kommer styling til kontaktformular */
+
+.kontaktikon{
+	margin-left: 45%
+}
+
+.kontaktlorem {
+	width: 80%;
+	margin-left: 10%;
+}
+.tekst{
+	color: #2A1000;
+}
+
+.margintop{
+	margin-top: 10px;
+}
+
+
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px;  
+    border: 1px solid #2A1000; 
+    border-radius: 4px; 
+    box-sizing: border-box;
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical; 
+}
+
+/* Send besked knap */
+
+input[type=submit] {
+    background-color: #749CD3;
+    color: #FFF;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #3D6BB4;
+}
+
+/* Åbningstider */
+.container, .tider{
+	background-color: #f8f8f8;
+	padding: 5px;
+}
+
+/* Padding omkring formularen */
+@media screen and (min-width: 600px){
+.container, .tider {
+	margin-left: 15%;
+	margin-right: 15%;
+    border-radius: 5px;
+	padding: 5%;
+	background-color: #f8f8f8;
+    }
+}
+/* Her kommer styling af indkøbsvogn */
+.tekstvogn {
+	width: 80%;
+	margin-left: 10%;
+}
+.product-image {
+  float: left;
+  width: 20%;
+}
+.product-details {
+  float: left;
+  width: 37%;
+}
+.product-price {
+  float: left;
+  width: 12%;
+}
+.product-quantity {
+  float: left;
+  width: 10%;
+}
+.product-removal {
+  float: left;
+  width: 9%;
+}
+.product-line-price {
+  float: left;
+  width: 12%;
+  text-align: right;
+}
+.group:before, .shopping-cart:before, .column-labels:before, .product:before, .totals-item:before,
+.group:after,
+.shopping-cart:after,
+.column-labels:after,
+.product:after,
+.totals-item:after {
+  content: '';
+  display: table;
+}
+.group:after, .shopping-cart:after, .column-labels:after, .product:after, .totals-item:after {
+  clear: both;
+}
+.group, .shopping-cart, .column-labels, .product, .totals-item {
+  zoom: 1;
+}
+.product .product-price:before, .product .product-line-price:before, .totals-value:before {
+  content: 'DKK ';
+}
+.marginvogn {
+  padding: 0px 30px 30px 20px;
+  font-family: Lato, sans-serif;
+  font-weight: 300;
+}
+ 
+h1 {
+  font-weight: 100;
+}
+ 
+label {
+  color: #aaa;
+  font-family: Lato, sans-serif;
+}
+ 
+.shopping-cart {
+  margin-top: -45px;
+}
+ 
+.column-labels label {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+.column-labels .product-image, .column-labels .product-details, .column-labels .product-removal {
+  text-indent: -9999px;
+}
+ 
+/* Produkt */
+.product {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+.product .product-image {
+  text-align: center;
+}
+.product .product-image img {
+  width: 100px;
+}
+.product .product-details .product-title {
+  margin-right: 20px;
+  font-family: Lato, sans-serif;
+}
+.product .product-details .product-description {
+  margin: 5px 20px 5px 0;
+  line-height: 1.4em;
+}
+.product .product-quantity input {
+  width: 40px;
+}
+
+/* Fjern produkt knap*/
+.product .remove-product {
+  border: 0;
+  padding: 4px 8px;
+  background-color: #B5B2B0;
+  color: #fff;
+  font-family: Lato, sans-serif;
+  font-size: 12px;
+  border-radius: 3px;
+}
+.product .remove-product:hover {
+  background-color: #DF9B67;
+}
+ 
+/* Total */
+.totals .totals-item {
+  float: right;
+  clear: both;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.totals .totals-item label {
+  float: left;
+  clear: both;
+  width: 79%;
+  text-align: right;
+}
+.totals .totals-item .totals-value {
+  float: right;
+  width: 21%;
+  text-align: right;
+}
+.totals .totals-item-total {
+  font-family: Lato, sans-serif;
+}
+ 
+.checkout {
+  float: right;
+  border: 0;
+  margin-top: 20px;
+  padding: 6px 25px;
+  background-color: #749CD3;
+  color: #fff;
+  font-size: 25px;
+  border-radius: 3px;
+}
+ 
+.checkout:hover {
+  background-color: #3D6BB4;
+}
+
+@media screen and (max-width: 600px) {
+  .shopping-cart {
+    margin: 0;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+  }
+ 
+  .column-labels {
+    display: none;
+  }
+ 
+  .product-image {
+    float: right;
+    width: auto;
+  }
+  .product-image img {
+    margin: 0 0 10px 10px;
+  }
+ 
+  .product-details {
+    float: none;
+    margin-bottom: 10px;
+    width: auto;
+  }
+ 
+  .product-price {
+    clear: both;
+    width: 70px;
+  }
+ 
+  .product-quantity {
+    width: 100px;
+  }
+  .product-quantity input {
+    margin-left: 20px;
+  }
+ 
+  .product-quantity:before {
+    content: 'x';
+  }
+ 
+  .product-removal {
+    width: auto;
+  }
+ 
+  .product-line-price {
+    float: right;
+    width: 70px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .product-removal {
+    float: right;
+  }
+  .product-line-price {
+    float: right;
+    clear: left;
+    width: auto;
+    margin-top: 10px;
+  }
+ 
+  .product .product-line-price:before {
+    content: 'Item Total: DKK ';
+  }
+ 
+  .totals .totals-item label {
+    width: 60%;
+  }
+  .totals .totals-item .totals-value {
+    width: 40%;
+  }
+}
+
+/* Styling af I'm not a robot på betalingssiden */
+
+input[type=checkbox] + label {
+  display: block;
+  margin: 0.2em;
+  cursor: pointer;
+  padding: 0.2em;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label:before {
+  content: "\2714";
+  border: 1px solid #B5B2B0;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  padding-left: 0.2em;
+  padding-bottom: 0.3em;
+  margin-right: 0.2em;
+  vertical-align: bottom;
+  color: #B5B2B0;
+  transition: .2s;
+  background-color: #FFF
+}
+
+input[type=checkbox] + label:active:before {
+  transform: scale(0);
+}
+
+input[type=checkbox]:checked + label:before {
+  background-color: #3D6BB4;
+  border-color: #3D6BB4;
+  color: #FFFF;
+}
+
+/* Styling af HotBot */
+
+.hotbotlogo{
+	margin-bottom: 40px;
+	margin-left: -20px;
+	width: 100%;
+	height: 100%;
+}
+
+.payment{
+  background: #f8f8f8;
+  max-width: 360px;
+  margin: 80px auto;
+  height: auto;
+  padding: 35px;
+  padding-top: 70px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.payment h2{
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  color: #2A1000;
+}
+
+.form .label{
+  display: block;
+  color: #2A1000;
+  margin-bottom: 6px;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.input{
+  padding: 13px 0px 13px 25px;
+  width: 100%;
+  text-align: center;
+  border: 2px solid #B5B2B0;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  outline: none;
+  font-size: 16px;
+  color: #2A1000;
+}
+
+.card-grp{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-item{
+  width: 48%;
+}
+
+.space{
+  margin-bottom: 20px;
+}
+
+.icon-relative{
+  position: relative;
+}
+
+.icon-relative .fas,
+.icon-relative .far{
+  position: absolute;
+  bottom: 12px;
+  left: 15px;
+  font-size: 20px;
+  color: #555555;
+}
+
+.btn{
+  margin-top: 40px;
+  background: #3D6BB4;
+  padding: 12px;
+  text-align: center;
+  color: #ffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn2{
+  margin-top: 40px;
+  background: #DF9B67;
+  padding: 12px;
+  text-align: center;
+  color: #ffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+@media screen and (max-width: 600px){
+  .card-grp{
+    flex-direction: column;
+  }
+  .card-item{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .btn{
+    margin-top: 20px;
+  }
+}
+
+/* Styling af Om os */
+
+
+
+/*styling af produkt siden */
+
+
+
+@media screen and (max-width: 700px) {
+	.produkt p {
+		width: 80%;
+		margin-left: 10%;
+		
+	}
+	
+	.produkt {
+		width: 90%;
+		margin-left: 5%;
+		margin-bottom: 25px;
+		background-color: #f8f8f8;
+		height: 100%;
+		border-radius: 5px;
+		
+	}
+	
+	.valgtprodukt {
+		width: 90%;
+		margin-left: 5%;
+	}
+}
+
+h4 {
+	font-size: 22px;
+	margin-left: 38%;
+	
+	
+}
+
+.kurven {
+	text-decoration: none;
+	margin-left: 40%;
+	margin-top: 50px;
+	border: solid 2px #749CD3;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 16px;
+	padding: 0 10px;
+	
+	
+}
+
+hr {
+	width: 0%;
+}
+
+@media screen and (min-width: 700px) {
+	.valgtprodukt {
+		width: 20%;
+		margin-left: 20%;
+		
+	}
+	.produkt p {
+		width: 35%;
+		position: fixed;
+		margin-left: 45%;
+		margin-top: -20%;
+		font-size: 14px;
+		height: 50px;
+	}	
+	
+	.kurven {
+		position: fixed;
+		margin-left: 5%;
+		margin-top: 17%;
+		font-size: 16px;
+		
+	}
+	
+	#dkk {
+		position: absolute;
+		margin-top: -7%;
+	}
+	
+	hr {
+		width: 80%;
+		margin-top: 3%;
+	}
+	
+	h4 {
+		margin-left: 45%;
+	}
+	.produkt {
+		
+	}
+	}	
+		
+
+
+
+	
+
+.personikon{
+	width: 25%;
+	height: 25%;
+	margin-left: 25%;
+}
+.personikon2{
+	width: 25%;
+	height: 25%;
+}
