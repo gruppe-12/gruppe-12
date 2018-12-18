@@ -1,3 +1,0 @@
-# gruppe12
-
-hej
